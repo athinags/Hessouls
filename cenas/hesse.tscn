@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dwcniyx2kn70i"]
+
+[ext_resource type="Script" uid="uid://5gd0m1kr0hlu" path="res://cenas/hesse.gd" id="1_iiwyx"]
+[ext_resource type="PackedScene" uid="uid://m1810qnfk2e8" path="res://hesse/Hesse_all.glb" id="2_iiwyx"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pikg"]
+radius = 1.1279297
+height = 5.3780518
+
+[node name="Hesse" type="CharacterBody3D" unique_id=259488525]
+script = ExtResource("1_iiwyx")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1226028742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.3513794, 0)
+shape = SubResource("CapsuleShape3D_4pikg")
+
+[node name="camera_pivot" type="Node3D" parent="." unique_id=1688967490]
+
+[node name="camera" type="Camera3D" parent="camera_pivot" unique_id=1836224321]
+transform = Transform3D(-1, -2.875044e-08, 8.2560014e-08, 1.0332168e-08, 0.8988902, 0.43817407, -8.6810076e-08, 0.43817407, -0.8988902, 0, 7.457797, -4.7810073)
+
+[node name="Hesse_all" parent="." unique_id=2005336694 instance=ExtResource("2_iiwyx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.5364883, 0, 0.034062386)

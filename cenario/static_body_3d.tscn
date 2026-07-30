@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://b4ivwvel7mvc0"]
+
+[ext_resource type="PackedScene" uid="uid://dwv3mpify6nmh" path="res://cenario/Mapa.blend" id="1_sbum3"]
+
+[node name="StaticBody3D" type="Node3D" unique_id=848384025]
+
+[node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=453464199]
+transform = Transform3D(4.526564, 0, 0, 0, 2.5737612, 0, 0, 0, 4.526564, 4.841191, -1.0619825, 16.64912)
+use_collision = true
+size = Vector3(2.7045898, 0.461792, 1.4322205)
+
+[node name="CSGBox3D" type="CSGBox3D" parent="." unique_id=81464961]
+transform = Transform3D(15.204129, 0, 0, 0, 8.644923, 0, 0, 0, 15.204129, 3.2774487, -1.754592, 20.749512)
+use_collision = true
+size = Vector3(1, 0.11425781, 0.96435547)
+
+[node name="CSGPolygon3D" type="CSGPolygon3D" parent="." unique_id=1240315805]
+transform = Transform3D(1.521005, 0, 0, 0, 1.117272, 0, 0, 0, 5.927265, -0.9787698, -1.3821149, 28.07417)
+use_collision = true
+polygon = PackedVector2Array(-1.2167125, -0.057549246, -0.07467294, 0.9439461, 7.8852334, 0.95720536, 7.78957, 0.1384843)
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=1079818163]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.250854, 0.5116434, 25.946497)
+use_collision = true
+size = Vector3(2.855957, 2.319336, 2.7591553)
+
+[node name="CSGCylinder3D" type="CSGCylinder3D" parent="." unique_id=1164770010]
+transform = Transform3D(-0.002862727, -0.88014543, 0, 0.88014543, -0.002862727, 0, 0, 0, 0.88015014, 6.871732, 0.81981397, 26.489624)
+height = 0.21044922
+
+[node name="Mapa" parent="." unique_id=861463323 instance=ExtResource("1_sbum3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.43681145, 0, 1.6168022)
