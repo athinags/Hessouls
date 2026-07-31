@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dk234jnsibmc"]
+
+[ext_resource type="PackedScene" uid="uid://dwcniyx2kn70i" path="res://cenas/hesse.tscn" id="1_j2ut6"]
+[ext_resource type="PackedScene" uid="uid://chejo2t14epu2" path="res://cenas/mapa.tscn" id="2_j2ut6"]
+
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j2ut6"]
+sky_top_color = Color(0.423302, 0.4963944, 0.59388304, 1)
+sky_horizon_color = Color(0.706508, 0.7170311, 0.7324033, 1)
+ground_horizon_color = Color(0.706508, 0.7170311, 0.7324033, 1)
+
+[sub_resource type="Sky" id="Sky_42xuo"]
+sky_material = SubResource("ProceduralSkyMaterial_j2ut6")
+
+[sub_resource type="Environment" id="Environment_0404l"]
+background_mode = 2
+sky = SubResource("Sky_42xuo")
+
+[node name="Principal" type="Node3D" unique_id=1338973854]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=145450876]
+environment = SubResource("Environment_0404l")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=625310562]
+transform = Transform3D(-0.91775465, -0.39504418, 0.04082382, 0, 0.10279249, 0.9947028, -0.39714795, 0.91289306, -0.094338275, 2.2177534, 44.140896, 0.5366599)
+light_color = Color(0.97845167, 0.9116281, 0.9170277, 1)
+shadow_enabled = true
+
+[node name="Hesse" parent="." unique_id=259488525 instance=ExtResource("1_j2ut6")]
+transform = Transform3D(0.20587206, 0, 0, 0, 0.20587206, 0, 0, 0, 0.20587206, 2.816836, 1.7543793, -5.164133)
+
+[node name="Node3D" parent="." unique_id=657232266 instance=ExtResource("2_j2ut6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.8870854, 0.87576294, 2.095707)
