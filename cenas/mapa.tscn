@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://chejo2t14epu2"]
 
 [ext_resource type="PackedScene" uid="uid://dwv3mpify6nmh" path="res://cenario/Mapa.blend" id="1_i10wb"]
+[ext_resource type="PackedScene" uid="uid://btjeck3r73wv3" path="res://cenas/arvore.tscn" id="2_n6ji8"]
+[ext_resource type="PackedScene" uid="uid://x1edwsmff1mn" path="res://modelos/scene.gltf" id="3_uhsl1"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kcims"]
 points = PackedVector3Array(-1.3522949, -0.230896, -0.7161102, -1.3522949, 0.230896, -0.7161102, 1.3522949, -0.230896, -0.7161102, -1.3522949, -0.230896, 0.7161102, -1.3522949, 0.230896, 0.7161102, 1.3522949, 0.230896, -0.7161102, 1.3522949, -0.230896, 0.7161102, 1.3522949, 0.230896, 0.7161102)
@@ -68,3 +70,18 @@ shape = SubResource("BoxShape3D_4r4yb")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.03126526, 0.070251465, -0.56292725)
 size = Vector3(15.665741, 1.1405029, 16.08313)
 material = SubResource("StandardMaterial3D_4pikg")
+
+[node name="Arvore" parent="." unique_id=1311174194 instance=ExtResource("2_n6ji8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.2171426, 0.8440094, -7.913314)
+
+[node name="Arvore2" parent="." unique_id=1231311675 instance=ExtResource("2_n6ji8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.5263438, 0.8440094, -2.8374305)
+
+[node name="Arvore3" parent="." unique_id=10527616 instance=ExtResource("2_n6ji8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.8496766, 0.98515177, 6.3842554)
+
+[node name="Arvore4" parent="." unique_id=603695029 instance=ExtResource("2_n6ji8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6914883, 0.99564075, 2.2496178)
+
+[node name="Sketchfab_Scene" parent="." unique_id=1661681161 instance=ExtResource("3_uhsl1")]
+transform = Transform3D(0.056784373, 0, 0.082313634, 0, 0.1, 0, -0.082313634, 0, 0.056784373, -120, -20, 0)

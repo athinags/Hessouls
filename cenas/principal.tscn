@@ -1,24 +1,24 @@
 [gd_scene format=3 uid="uid://dk234jnsibmc"]
 
+[ext_resource type="Texture2D" uid="uid://bwqaan3eljpd2" path="res://modelos/kloofendal_48d_partly_cloudy_puresky_2k.exr" id="1_42xuo"]
 [ext_resource type="PackedScene" uid="uid://dwcniyx2kn70i" path="res://cenas/hesse.tscn" id="1_j2ut6"]
 [ext_resource type="PackedScene" uid="uid://chejo2t14epu2" path="res://cenas/mapa.tscn" id="2_j2ut6"]
 
-[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_j2ut6"]
-sky_top_color = Color(0.423302, 0.4963944, 0.59388304, 1)
-sky_horizon_color = Color(0.706508, 0.7170311, 0.7324033, 1)
-ground_horizon_color = Color(0.706508, 0.7170311, 0.7324033, 1)
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j2ut6"]
+panorama = ExtResource("1_42xuo")
 
-[sub_resource type="Sky" id="Sky_42xuo"]
-sky_material = SubResource("ProceduralSkyMaterial_j2ut6")
+[sub_resource type="Sky" id="Sky_okwug"]
+sky_material = SubResource("PanoramaSkyMaterial_j2ut6")
 
-[sub_resource type="Environment" id="Environment_0404l"]
+[sub_resource type="Environment" id="Environment_sw2mv"]
 background_mode = 2
-sky = SubResource("Sky_42xuo")
+sky = SubResource("Sky_okwug")
+fog_sky_affect = 0.075
 
 [node name="Principal" type="Node3D" unique_id=1338973854]
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=145450876]
-environment = SubResource("Environment_0404l")
+environment = SubResource("Environment_sw2mv")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=625310562]
 transform = Transform3D(-0.91775465, -0.39504418, 0.04082382, 0, 0.10279249, 0.9947028, -0.39714795, 0.91289306, -0.094338275, 2.2177534, 44.140896, 0.5366599)
