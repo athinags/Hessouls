@@ -6,8 +6,8 @@ const ACCELERATION = 30
 
 @onready var camera_pivot: Node3D = $camera_pivot
 @onready var camera: Camera3D = $camera_pivot/camera
-@onready var hesse_skin: Node3D = $Hesse_atq1
-@onready var anim_player : AnimationPlayer = hesse_skin.get_node("AnimationPlayer2")
+@onready var hesse_skin: Node3D = $Hesse_all
+@onready var anim_player : AnimationPlayer = hesse_skin.get_node("AnimationPlayer")
 var mouse_sensitivity : float = 0.15
 var camera_rotation : Vector2 = Vector2.ZERO
 var last_movement_dir := Vector3.BACK
@@ -101,9 +101,8 @@ func _handle_animation():
 				anim_player.play("Fall", 0.2)
 	else:
 		if velocity.length() > 0.1:
-			if anim_player.current_animation != "rigAction":
-				anim_player.play("rigAction", 0.2)
+			if anim_player.current_animation != "correr":
+				anim_player.play("correr", 0.2)
 		else:
 			if anim_player.current_animation != "Idle":
 				anim_player.play("Idle", 0.2)
-				

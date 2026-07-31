@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://qmamqjnufvcf"]
+
+[ext_resource type="Script" uid="uid://gdet13e4hlu3" path="res://cenas/niquitin.gd" id="1_hc3xc"]
+[ext_resource type="PackedScene" uid="uid://cm7yaa7mu0o5k" path="res://niquitin/saltitando.glb" id="1_vgpot"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pikg"]
+height = 1.8745117
+
+[node name="niquitin" type="CharacterBody3D" unique_id=1155770977]
+script = ExtResource("1_hc3xc")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=775332270]
+transform = Transform3D(0.76881427, 0, 0, 0, 0.76881427, 0, 0, 0, 0.76881427, 0, 0.62624806, 0)
+shape = SubResource("CapsuleShape3D_4pikg")
+
+[node name="saltitando" parent="." unique_id=438271798 instance=ExtResource("1_vgpot")]
+transform = Transform3D(0.35312977, 0, 0, 0, 0.35312977, 0, 0, 0, 0.35312977, 0.034096837, 0, 0.0052330494)
