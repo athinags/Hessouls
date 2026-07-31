@@ -3,6 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dwv3mpify6nmh" path="res://cenario/Mapa.blend" id="1_i10wb"]
 [ext_resource type="PackedScene" uid="uid://btjeck3r73wv3" path="res://cenas/arvore.tscn" id="2_n6ji8"]
 [ext_resource type="PackedScene" uid="uid://x1edwsmff1mn" path="res://modelos/scene.gltf" id="3_uhsl1"]
+[ext_resource type="PackedScene" uid="uid://c0pi0h1a656lm" path="res://modelos/Nature/glTF/Bush.gltf" id="4_sw2mv"]
 
 [sub_resource type="ConvexPolygonShape3D" id="ConvexPolygonShape3D_kcims"]
 points = PackedVector3Array(-1.3522949, -0.230896, -0.7161102, -1.3522949, 0.230896, -0.7161102, 1.3522949, -0.230896, -0.7161102, -1.3522949, -0.230896, 0.7161102, -1.3522949, 0.230896, 0.7161102, 1.3522949, 0.230896, -0.7161102, 1.3522949, -0.230896, 0.7161102, 1.3522949, 0.230896, 0.7161102)
@@ -85,3 +86,6 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.6914883, 0.99564075, 2.2496
 
 [node name="Sketchfab_Scene" parent="." unique_id=1661681161 instance=ExtResource("3_uhsl1")]
 transform = Transform3D(0.056784373, 0, 0.082313634, 0, 0.1, 0, -0.082313634, 0, 0.056784373, -120, -20, 0)
+
+[node name="Bush2" parent="." unique_id=1596696402 instance=ExtResource("4_sw2mv")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 2.0851395, 0.62441444, 6.317201)
