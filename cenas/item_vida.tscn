@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3]
+
+[ext_resource type="Script" uid="uid://cnp27hapvqjoo" path="res://item_vida.gd" id="1_script"]
+
+[sub_resource type="StandardMaterial3D" id="mat_cura"]
+albedo_color = Color(0.15, 0.9, 0.35, 1)
+emission_enabled = true
+emission = Color(0.1, 1, 0.4, 1)
+emission_energy_multiplier = 1.5
+
+[sub_resource type="BoxMesh" id="mesh_vertical"]
+material = SubResource("mat_cura")
+size = Vector3(0.16, 0.5, 0.16)
+
+[sub_resource type="BoxMesh" id="mesh_horizontal"]
+material = SubResource("mat_cura")
+size = Vector3(0.5, 0.16, 0.16)
+
+[sub_resource type="SphereShape3D" id="shape_coleta"]
+radius = 0.6
+
+[node name="ItemVida" type="Area3D"]
+script = ExtResource("1_script")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("shape_coleta")
+
+[node name="CruzVertical" type="MeshInstance3D" parent="."]
+mesh = SubResource("mesh_vertical")
+
+[node name="CruzHorizontal" type="MeshInstance3D" parent="."]
+mesh = SubResource("mesh_horizontal")
+
+[node name="LuzCura" type="OmniLight3D" parent="."]
+light_color = Color(0.3, 1, 0.5, 1)
+light_energy = 0.8
+omni_range = 2.0
