@@ -8,6 +8,7 @@
 [ext_resource type="Script" uid="uid://csoio868a6fjk" path="res://cenas/gatilho_ponte.gd" id="5_ff0xt"]
 [ext_resource type="Script" uid="uid://bc2nrq84xv7a2" path="res://cenas/barra_vida.gd" id="6_0cijk"]
 [ext_resource type="PackedScene" path="res://cenas/item_vida.tscn" id="8_djk5k"]
+[ext_resource type="PackedScene" uid="uid://cbr3gi6yym84x" path="res://cenas/musica.tscn" id="9_sflf3"]
 
 [sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_j2ut6"]
 panorama = ExtResource("1_42xuo")
@@ -193,7 +194,7 @@ transform = Transform3D(-0.0030758567, 0.043773487, -0.99903667, -0.0032547116, 
 mesh = SubResource("BoxMesh_42xuo")
 
 [node name="niquitin" parent="." unique_id=1155770977 node_paths=PackedStringArray("alvo") instance=ExtResource("4_0404l")]
-transform = Transform3D(0.8757932, 0, -0.48268643, 0, 1, 0, 0.48268643, 0, 0.8757932, -0.7314615, 1.865672, -1.3073196)
+transform = Transform3D(-0.9966109, 0, -0.08226072, 0, 1, 0, 0.08226072, 0, -0.9966109, 1.9625483, 1.865672, -5.855209)
 alvo = NodePath("../Hesse")
 
 [node name="GatilhoPonte" type="Area3D" parent="." unique_id=1621264443]
@@ -257,4 +258,8 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="ItemVida" parent="." unique_id=468588180 instance=ExtResource("8_djk5k")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.67244434, 2.4135942, 7.9019585)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.41091013, 2.4135942, -4.7796764)
+
+[node name="AudioStreamPlayer3D" parent="." unique_id=1371708184 instance=ExtResource("9_sflf3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4.6725426, 0)
+autoplay = true

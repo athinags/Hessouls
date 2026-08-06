@@ -35,7 +35,7 @@ var esta_morto: bool = false
 @export_category("Ataque")
 
 # Dano causado em cada ataque.
-@export var dano: float = 1.0
+@export var dano: float = 5.0
 
 
 # Tempo, em segundos, entre os ataques.

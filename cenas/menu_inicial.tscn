@@ -1,0 +1,148 @@
+[gd_scene format=3 uid="uid://cbsos1unghd6g"]
+
+[ext_resource type="Script" uid="uid://cywvsfylpas3v" path="res://cenas/menu_inicial.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://dh6dqy3d8j3va" path="res://hesse/imagemHesse.jpeg" id="3_cf1la"]
+
+[sub_resource type="StyleBoxFlat" id="botao_normal"]
+content_margin_left = 40.0
+content_margin_top = 14.0
+content_margin_right = 40.0
+content_margin_bottom = 14.0
+bg_color = Color(0.04, 0.04, 0.08, 0.72)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.55, 0.45, 0.28, 0.7)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="botao_pressionado"]
+content_margin_left = 40.0
+content_margin_top = 14.0
+content_margin_right = 40.0
+content_margin_bottom = 14.0
+bg_color = Color(0.18, 0.1, 0.04, 0.95)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.8, 0.4, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[sub_resource type="StyleBoxFlat" id="botao_hover"]
+content_margin_left = 40.0
+content_margin_top = 14.0
+content_margin_right = 40.0
+content_margin_bottom = 14.0
+bg_color = Color(0.1, 0.07, 0.04, 0.85)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.65, 0.25, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+
+[node name="MenuInicial" type="Control" unique_id=303316511]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_script")
+
+[node name="Fundo" type="TextureRect" parent="." unique_id=566686919]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_cf1la")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="ImagemHesse" type="Sprite2D" parent="." unique_id=1101386029]
+position = Vector2(580.5, 227.25002)
+scale = Vector2(0.63508445, 0.5271875)
+texture = ExtResource("3_cf1la")
+
+[node name="Centro" type="VBoxContainer" parent="." unique_id=357695118]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -260.0
+offset_top = -220.0
+offset_right = 260.0
+offset_bottom = 220.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 18
+alignment = 1
+
+[node name="Titulo" type="Label" parent="Centro" unique_id=1923858995]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.92, 0.85, 0.68, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.85)
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+theme_override_font_sizes/font_size = 96
+text = "H E S S O U L S"
+horizontal_alignment = 1
+
+[node name="Subtitulo" type="Label" parent="Centro" unique_id=1771808648]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.7, 0.62, 0.5, 0.9)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.8)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 22
+text = "A jornada de Hesse contra o Niquitin"
+horizontal_alignment = 1
+
+[node name="Espaco" type="Control" parent="Centro" unique_id=1659046636]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+
+[node name="BotaoJogar" type="Button" parent="Centro" unique_id=282285686]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.92, 0.85, 0.68, 1)
+theme_override_colors/font_focus_color = Color(1, 0.85, 0.5, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9, 0.6, 1)
+theme_override_colors/font_hover_color = Color(1, 0.85, 0.5, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("botao_normal")
+theme_override_styles/pressed = SubResource("botao_pressionado")
+theme_override_styles/hover = SubResource("botao_hover")
+theme_override_styles/focus = SubResource("botao_hover")
+text = "JOGAR"
+
+[node name="BotaoSair" type="Button" parent="Centro" unique_id=1056942769]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(320, 0)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.92, 0.85, 0.68, 1)
+theme_override_colors/font_pressed_color = Color(1, 0.9, 0.6, 1)
+theme_override_colors/font_hover_color = Color(1, 0.85, 0.5, 1)
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("botao_normal")
+theme_override_styles/pressed = SubResource("botao_pressionado")
+theme_override_styles/hover = SubResource("botao_hover")
+theme_override_styles/focus = SubResource("botao_hover")
+text = "SAIR"

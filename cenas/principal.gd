@@ -14,7 +14,7 @@ extends Node3D
 var reiniciando_jogo: bool = false
 
 
-func _ready() -> void:
+func _ready() -> void:	
 	# Garante que a mensagem comece escondida.
 	mensagem_vitoria.hide()
 

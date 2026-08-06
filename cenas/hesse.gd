@@ -1,5 +1,7 @@
 extends CharacterBody3D
 
+@onready var sound_effect = $AudioStreamPlayer3D
+
 signal vida_alterada(vida_atual: float, vida_maxima: float)
 signal morreu
 
@@ -361,7 +363,7 @@ func _piscar_vermelho() -> void:
 
 	# Mantém o efeito por 0,15 segundo.
 	await get_tree().create_timer(0.25).timeout
-
+	sound_effect.play(0.5)
 	# Remove o vermelho e revela novamente
 	# os materiais normais do personagem.
 	for malha in malhas_hesse:

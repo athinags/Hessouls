@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://5gd0m1kr0hlu" path="res://cenas/hesse.gd" id="1_iiwyx"]
 [ext_resource type="PackedScene" uid="uid://m1810qnfk2e8" path="res://hesse/Hesse_all.glb" id="2_iiwyx"]
+[ext_resource type="AudioStream" uid="uid://drtxa1str4oaw" path="res://hesse/dano.mp3" id="3_tq8ha"]
 
 [sub_resource type="CapsuleShape3D" id="CapsuleShape3D_4pikg"]
 radius = 1.1279297
@@ -203,5 +204,8 @@ transform = Transform3D(0.550194, -0.8296661, 0.0945565, 0.41359043, 0.17238504,
 
 [node name="Hesse_001" parent="Hesse_all/rig/Skeleton3D/hand_ik_R" index="0" unique_id=11637430]
 transform = Transform3D(0.6033231, 0.2942678, 0.7412199, -0.1658949, -0.86279136, 0.47756487, 0.7800505, -0.41109043, -0.47172555, 0.8143102, 2.0040998, 4.9601464)
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=1867443651]
+stream = ExtResource("3_tq8ha")
 
 [editable path="Hesse_all"]

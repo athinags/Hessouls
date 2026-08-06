@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://cbr3gi6yym84x"]
+
+[ext_resource type="AudioStream" uid="uid://d3dufkbc7awbq" path="res://hesse/de-Blob-Blissful-_7fF7rwx9q5k_.mp3" id="1_wro3q"]
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" unique_id=1371708184]
+stream = ExtResource("1_wro3q")
+volume_db = -6.234
